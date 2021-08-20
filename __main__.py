@@ -1,7 +1,21 @@
-import speedtest
+
+import sys
+import subprocess
+try:
+    import speedtest
+except:
+    # implement pip as a subprocess:
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+    'speedtest-cli'])
 import time
 from datetime import datetime
-import matplotlib
+try:
+
+    import matplotlib
+except:
+    # implement pip as a subprocess:
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+    'matplotlib'])
 import matplotlib.pyplot as plt
 count = 0
 print("Started the speed logger.")

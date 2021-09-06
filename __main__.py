@@ -24,7 +24,7 @@ except:
 import matplotlib.pyplot as plt
 count = 0
 print("Started the speed logger.")
-mins = 5
+mins = 2
 Times = []
 Down = []
 Up = []
@@ -42,7 +42,7 @@ while 1:
         Up.append(u_st)
         Times.append(count*mins/60)
         plt.plot(Times,Down)
-        plt.xlabel("Time [5 min interval]")
+        plt.xlabel("Time [2 min interval]")
         plt.ylabel("Mb/s [Rounded to closest integer]")
         plt.savefig('speed.png')
         s = f"{current_time} : Down speed = {d_st} Mb/s, Up speed = {u_st} Mb/s\n"
